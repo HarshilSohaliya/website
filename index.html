@@ -1,25 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ===== META TAGS (SEO) ===== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shfirm · IT Solutions</title>
-    <link rel="stylesheet" href="./style.css" />
+    
+    <!-- Primary SEO -->
+    <title>shfirm · IT Solutions | Website Creation, Redesign, Software Development</title>
+    <meta name="description" content="shfirm provides IT solutions: website creation, redesign, software development, maintenance, marketing & social media. Built with championship spirit." />
+    <meta name="keywords" content="IT solutions, website creation, web redesign, software development, website maintenance, digital marketing, social media marketing, shfirm" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://shfirm.com/" />
+    
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="shfirm · IT Solutions with Championship Spirit" />
+    <meta property="og:description" content="Website creation, redesign, software development, maintenance, marketing & social media — all under one roof." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shfirm.com/" />
+    <meta property="og:image" content="https://shfirm.com/og-image.jpg" />
+    <meta property="og:site_name" content="shfirm" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="shfirm · IT Solutions with Championship Spirit" />
+    <meta name="twitter:description" content="Website creation, redesign, software development, maintenance, marketing & social media — all under one roof." />
+    <meta name="twitter:image" content="https://shfirm.com/twitter-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    
+    <!-- Schema.org JSON-LD (Structured Data) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "shfirm",
+        "description": "IT solutions provider offering website creation, redesign, software development, maintenance, marketing and social media services.",
+        "url": "https://shfirm.com",
+        "logo": "https://shfirm.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+            "https://linkedin.com/company/shfirm",
+            "https://twitter.com/shfirm",
+            "https://instagram.com/shfirm"
+        ]
+    }
+    </script>
+    
+    <!-- Services Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "IT Solutions",
+        "provider": {
+            "@type": "Organization",
+            "name": "shfirm"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IT Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Website Creation"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Redesign"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Software Development"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Website Maintenance"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Marketing"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Social Media Marketing"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://shfirm.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://shfirm.com/#services"
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR_GA_ID');
+</script>
 </head>
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-inner">
-                <!-- LOGO — Man United inspired crest -->
-                <a href="#" class="logo">
+                <!-- LOGO — with proper alt text -->
+                <a href="#" class="logo" aria-label="shfirm IT Solutions Home">
                     <div class="crest">
                         <div class="crest-shield">
                             <div class="crest-top">
                                 <span class="crest-star">★</span>
-                                <span class="crest-devil">👹</span>
+                                <span class="crest-devil" aria-hidden="true">👹</span>
                             </div>
                             <div class="crest-name">shfirm</div>
                             <div class="crest-year">est. 2026</div>
@@ -35,15 +175,16 @@
                     </div>
                 </a>
 
-                <nav class="nav">
-                    <a href="#">Home</a>
-                    <a href="#">Services</a>
-                    <a href="#">Work</a>
-                    <a href="#">About</a>
-                    <a href="#" class="nav-cta">Contact</a>
+                <!-- Navigation with ARIA -->
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <a href="#" aria-current="page">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#work">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="nav-cta">Contact</a>
                 </nav>
 
-                <button class="hamburger" id="hamburger" aria-label="Menu">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -51,12 +192,12 @@
     </header>
 
     <!-- ===== HERO ===== -->
-    <section class="hero">
+    <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-badge">⚡ Championship IT</div>
-                    <h1>
+                    <h1 id="hero-title">
                         Build <span class="highlight">great</span> things<br />
                         with <span class="highlight-red">shfirm</span>
                     </h1>
@@ -65,8 +206,8 @@
                         marketing · social media — all under one roof.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn-primary">Start a project</a>
-                        <a href="#" class="btn-outline">Explore services</a>
+                        <a href="#contact" class="btn-primary">Start a project</a>
+                        <a href="#services" class="btn-outline">Explore services</a>
                     </div>
                     <div class="hero-trust">
                         <span>⭐ 4.9/5</span>
@@ -76,7 +217,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-card">
-                        <div class="hero-card-icon">🌐</div>
+                        <span class="hero-card-icon" aria-hidden="true">🌐</span>
                         <h4>Full‑stack IT</h4>
                         <p>From code to creative, we deliver excellence</p>
                         <div class="hero-card-stats">
@@ -93,60 +234,71 @@
     </section>
 
     <!-- ===== SERVICES ===== -->
-    <section class="services">
+    <section class="services" id="services" aria-labelledby="services-title">
         <div class="container">
             <div class="section-label">What we do</div>
-            <h2 class="section-title">Our <span>services</span></h2>
+            <h2 id="services-title" class="section-title">Our <span>services</span></h2>
             <p class="section-sub">Six core pillars to take your digital presence to the next level.</p>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
+                <!-- Service 1: Website Creation -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">🌐</span>
                     <h3>Website Creation</h3>
                     <p>Custom, responsive websites built with modern tech and seamless UX.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔄</div>
+                    <a href="#" class="service-link" aria-label="Learn more about Website Creation">Learn more →</a>
+                </article>
+                
+                <!-- Service 2: Redesign -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">🔄</span>
                     <h3>Redesign</h3>
                     <p>Fresh UI, better UX, and modern aesthetics that convert visitors.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Software Dev</h3>
+                    <a href="#" class="service-link" aria-label="Learn more about Redesign services">Learn more →</a>
+                </article>
+                
+                <!-- Service 3: Software Development -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">⚙️</span>
+                    <h3>Software Development</h3>
                     <p>Scalable, secure, and tailored software solutions for your business.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Maintenance</h3>
+                    <a href="#" class="service-link" aria-label="Learn more about Software Development">Learn more →</a>
+                </article>
+                
+                <!-- Service 4: Maintenance -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">🛡️</span>
+                    <h3>Website Maintenance</h3>
                     <p>Keep your site fast, secure, and up‑to‑date with proactive care.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
+                    <a href="#" class="service-link" aria-label="Learn more about Website Maintenance">Learn more →</a>
+                </article>
+                
+                <!-- Service 5: Marketing -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">📈</span>
                     <h3>Marketing</h3>
                     <p>Data‑driven strategies that boost visibility and conversions.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Social Media</h3>
+                    <a href="#" class="service-link" aria-label="Learn more about Marketing services">Learn more →</a>
+                </article>
+                
+                <!-- Service 6: Social Media -->
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">📱</span>
+                    <h3>Social Media Marketing</h3>
                     <p>Build communities, grow your brand, and turn followers into customers.</p>
-                    <a href="#" class="service-link">Learn more →</a>
-                </div>
+                    <a href="#" class="service-link" aria-label="Learn more about Social Media Marketing">Learn more →</a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- ===== MANTRA / ABOUT (UNITED SPIRIT) ===== -->
-    <section class="mantra">
+    <!-- ===== MANTRA / ABOUT ===== -->
+    <section class="mantra" id="about" aria-labelledby="mantra-title">
         <div class="container">
             <div class="mantra-inner">
                 <div class="mantra-content">
                     <div class="mantra-badge">🔴 #RedDevilTech</div>
-                    <h2>Built with <span class="gold">championship</span> spirit</h2>
+                    <h2 id="mantra-title">Built with <span class="gold">championship</span> spirit</h2>
                     <p>
                         At shfirm, we combine technical mastery with creative fire. 
                         Inspired by the legacy of Manchester United, we deliver IT 
@@ -160,7 +312,7 @@
                 </div>
                 <div class="mantra-visual">
                     <div class="mantra-shield">
-                        <span class="ms-devil">👹</span>
+                        <span class="ms-devil" aria-hidden="true">👹</span>
                         <span class="ms-text">shfirm</span>
                         <span class="ms-motto">IT · FORWARD</span>
                     </div>
@@ -170,10 +322,10 @@
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="cta">
+    <section class="cta" id="contact" aria-labelledby="cta-title">
         <div class="container">
             <div class="cta-inner">
-                <h2>Ready to build something <span class="gold">great</span>?</h2>
+                <h2 id="cta-title">Ready to build something <span class="gold">great</span>?</h2>
                 <p>Let's talk about your next project — we're here to make it happen.</p>
                 <a href="#" class="btn-cta">Get in touch →</a>
             </div>
@@ -181,7 +333,7 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -193,7 +345,7 @@
                     <h5>Services</h5>
                     <a href="#">Web Creation</a>
                     <a href="#">Redesign</a>
-                    <a href="#">Software Dev</a>
+                    <a href="#">Software Development</a>
                     <a href="#">Maintenance</a>
                 </div>
                 <div class="footer-col">
@@ -214,10 +366,10 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 shfirm. All rights reserved. Built with ❤️ and code.</p>
                 <div class="footer-social">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">YouTube</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="YouTube">YouTube</a>
                 </div>
             </div>
         </div>
